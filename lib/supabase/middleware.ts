@@ -5,7 +5,7 @@ export async function updateSession(request: NextRequest) {
     request,
   });
 
-  const publicPaths = ["/", "/wods", "/workout", "/rankings"];
+  const publicPaths = ["/", "/wods", "/workout", "/rankings", "/heats"];
   const pathname = request.nextUrl.pathname;
 
   const isPublicPath = publicPaths.some((path) => {
