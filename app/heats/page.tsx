@@ -275,7 +275,7 @@ export default async function HeatsPage() {
               Heats aún no sorteados
             </h2>
             <p className="text-gray-600">
-              Los heats aparecerán aquí cuando se sorteen.
+              Los heats aparecerán aquí cuando se sorteen
             </p>
           </div>
         )}
