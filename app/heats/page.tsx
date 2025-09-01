@@ -1,5 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
-import { ArrowLeft, Users } from "lucide-react";
+import { ArrowLeft, Calendar, Users } from "lucide-react";
 import Link from "next/link";
 
 interface Team {
@@ -163,7 +163,7 @@ export default async function HeatsPage() {
                 </button>
               </Link>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
-                <Users className="w-6 h-6 sm:w-10 sm:h-10 text-white" />
+                <Calendar className="w-6 h-6 sm:w-10 sm:h-10 text-white" />
               </div>
               <div className="min-w-0 flex-1">
                 <h1 className="text-sm sm:text-4xl font-bold title-games text-white truncate">

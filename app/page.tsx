@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
 import { useRealtimeData } from "@/hooks/use-realtime-data";
-import { Calendar, Trophy, Users } from "lucide-react";
+import { Calendar, Dumbbell, Trophy } from "lucide-react";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -70,7 +70,7 @@ export default function HomePage() {
                   size="sm"
                   className="text-green-400 hover:text-white hover:bg-green-500/20 cursor-pointer px-1.5 sm:px-3 min-w-0"
                 >
-                  <Calendar className="w-4 h-4 sm:mr-2" />
+                  <Dumbbell className="w-4 h-4 sm:mr-2" />
                   <span className="hidden sm:inline">WODs</span>
                 </Button>
               </Link>
@@ -81,7 +81,7 @@ export default function HomePage() {
                   size="sm"
                   className="text-green-400 hover:text-white hover:bg-green-500/20 cursor-pointer px-1.5 sm:px-3 min-w-0"
                 >
-                  <Users className="w-4 h-4 sm:mr-2" />
+                  <Calendar className="w-4 h-4 sm:mr-2" />
                   <span className="hidden sm:inline">Heats</span>
                 </Button>
               </Link>
