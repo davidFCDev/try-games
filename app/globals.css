@@ -1,0 +1,339 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Volviendo a la paleta original de blancos y naranjas */
+  --background: #ffffff;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+  --popover: #ffffff;
+  --popover-foreground: #1f2937;
+  --primary: #ea580c;
+  --primary-foreground: #ffffff;
+  --secondary: #f97316;
+  --secondary-foreground: #ffffff;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #fb923c;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #ffffff;
+  --ring: #ea580c;
+  --chart-1: #ea580c;
+  --chart-2: #f97316;
+  --chart-3: #fb923c;
+  --chart-4: #fdba74;
+  --chart-5: #fed7aa;
+  --radius: 0.5rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1f2937;
+  --sidebar-primary: #ea580c;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f97316;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #ea580c;
+}
+
+@theme inline {
+  /* Volviendo a las fuentes originales */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Estilos actualizados con paleta naranja y blanca original */
+.competition-bg {
+  background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+  position: relative;
+  min-height: 100vh;
+}
+
+.title-games {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.podium-card {
+  background: #ffffff;
+  border: 2px solid #fed7aa;
+  box-shadow: 0 20px 25px -5px rgba(234, 88, 12, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.podium-card:hover {
+  transform: translateY(-4px);
+  border-color: #ea580c;
+  box-shadow: 0 25px 50px -12px rgba(234, 88, 12, 0.25);
+}
+
+.team-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #ea580c;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.2);
+  transition: all 0.3s ease;
+}
+
+.team-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.3);
+}
+
+.wods-button {
+  background: #ea580c;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(234, 88, 12, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.wods-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(234, 88, 12, 0.4);
+  background: #c2410c;
+}
+
+.team-card {
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.team-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(234, 88, 12, 0.15);
+  border-color: #ea580c;
+}
+
+.workout-card {
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.workout-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #ea580c;
+}
+
+.workout-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(234, 88, 12, 0.2);
+  border-color: #ea580c;
+}
+
+.medal-gold {
+  background: #ffd700;
+  color: #000000;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.medal-silver {
+  background: #c0c0c0;
+  color: #000000;
+  box-shadow: 0 4px 15px rgba(192, 192, 192, 0.4);
+}
+
+.medal-bronze {
+  background: #cd7f32;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(205, 127, 50, 0.4);
+}
+
+/* Badges de posición en el podio */
+.position-badge {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  z-index: 50;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid #ffffff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Clase personalizada para border-3 */
+.border-3 {
+  border-width: 3px;
+}
+
+.position-badge:hover {
+  transform: scale(1.1);
+}
+
+.position-badge-gold {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+  color: #1f2937;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.position-badge-silver {
+  background: linear-gradient(135deg, #c0c0c0 0%, #e5e7eb 100%);
+  color: #1f2937;
+  box-shadow: 0 4px 15px rgba(192, 192, 192, 0.4);
+}
+
+.position-badge-bronze {
+  background: linear-gradient(135deg, #cd7f32 0%, #d97706 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(205, 127, 50, 0.4);
+}
+
+/* Contenedor del podio con altura fija */
+.podium-container {
+  min-height: 400px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.podium-item {
+  position: relative;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.podium-avatar {
+  border-radius: 50%;
+  border: 4px solid #ea580c;
+  box-shadow: 0 8px 25px rgba(234, 88, 12, 0.3);
+  transition: all 0.3s ease;
+  object-fit: cover;
+  background: #f3f4f6;
+}
+
+.podium-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(234, 88, 12, 0.4);
+}
+
+.podium-title {
+  min-height: 3rem;
+  max-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+  overflow: hidden;
+  width: 100%;
+}
+
+.podium-title h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  word-break: break-word;
+  hyphens: auto;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive design optimizado para móviles */
+@media (max-width: 768px) {
+  .title-games {
+    font-size: 1rem;
+  }
+
+  .wods-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .team-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .podium-card {
+    margin-bottom: 16px;
+  }
+}
