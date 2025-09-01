@@ -1,4 +1,5 @@
 import { AddResultForm } from "@/components/add-result-form";
+import { AdminResultsSection } from "@/components/admin-results-section";
 import { HeatManagement } from "@/components/heat-management";
 import { TeamManagement } from "@/components/team-management";
 import { Badge } from "@/components/ui/badge";
@@ -283,6 +284,9 @@ export default async function AdminPage() {
             </CardContent>
           </Card>
         </div>
+
+        {/* Gestión de Resultados */}
+        <AdminResultsSection initialResults={results} />
 
         {/* Gestión de Heats */}
         <Card className="mt-8 bg-white border-orange-200">
